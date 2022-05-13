@@ -48,6 +48,8 @@ users2:
     age: 17
 
 baseDir: c:/windows/user
+# 如果需要转义,就需要加入双引号
+# baseDir: "c:/windows/user"
 currDir: ${baseDir}/tmp/
 
 
