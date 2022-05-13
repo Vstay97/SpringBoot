@@ -47,6 +47,9 @@ users2:
     name: lisi
     age: 17
 
+baseDir: c:/windows/user
+currDir: ${baseDir}/tmp/
+
 
 server:
   port: 80

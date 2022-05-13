@@ -26,6 +26,9 @@ public class BookController {
     @Value("${users[0].age}")
     private String age1;
 
+    @Value("${currDir}")
+    private String dir1;
+
 
 
 
@@ -38,6 +41,7 @@ public class BookController {
         System.out.println("user.name =====>>> "+name1);
         System.out.println("likes[0] =====>>> "+likes1);
         System.out.println("user[0].age =====>>> "+age1);
+        System.out.println("dir1 =====>>> "+dir1);
 
 
 
