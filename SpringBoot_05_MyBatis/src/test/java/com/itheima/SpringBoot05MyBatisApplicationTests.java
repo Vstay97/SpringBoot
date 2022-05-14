@@ -1,6 +1,6 @@
 package com.itheima;
 
-import com.itheima.dao.BookDao;
+import com.itheima.dao.UserDao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SpringBoot05MyBatisApplicationTests {
 
     @Autowired
-    private BookDao bookDao;
+    private UserDao bookDao;
 
 
     @Test

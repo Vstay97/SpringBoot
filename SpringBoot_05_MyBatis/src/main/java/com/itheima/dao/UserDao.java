@@ -1,12 +1,12 @@
 package com.itheima.dao;
 
-import com.itheima.domain.Book;
+import com.itheima.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 // 创建mapper
 @Mapper
-public interface BookDao {
+public interface UserDao {
     @Select("select * from t_user where id = #{id}")
-    public Book getBookById(int id);
+    public User getBookById(int id);
 }

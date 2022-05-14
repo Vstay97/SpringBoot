@@ -1,7 +1,7 @@
 package com.itheima.domain;
 
 // 3. 创建实体类
-public class Book {
+public class User {
     private String id;
     private String username;
     private String password;
