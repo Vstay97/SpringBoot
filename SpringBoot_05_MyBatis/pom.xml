@@ -23,6 +23,7 @@
             <version>2.2.2</version>
         </dependency>
 
+        <!--1. 导入相关依赖-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
