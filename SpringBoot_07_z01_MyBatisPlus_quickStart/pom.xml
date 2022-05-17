@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.itheima</groupId>
-    <artifactId>SpringBoot_07_z_MyBatisPlus</artifactId>
+    <artifactId>SpringBoot_07_z01_MyBatisPlusquickStrat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringBoot_07_z_MyBatisPlus</name>
-    <description>SpringBoot_07_z_MyBatisPlus</description>
+    <name>SpringBoot_07_z01_MyBatisPlusquickStrat</name>
+    <description>SpringBoot_07_z01_MyBatisPlusquickStrat</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
