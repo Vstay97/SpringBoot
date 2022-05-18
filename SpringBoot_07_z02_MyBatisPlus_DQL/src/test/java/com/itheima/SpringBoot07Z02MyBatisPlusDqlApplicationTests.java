@@ -37,11 +37,23 @@ class SpringBoot07Z02MyBatisPlusDqlApplicationTests {
         /**
          * 第三种，通过lambda对象查
          */
-        LambdaQueryWrapper<User> lqw = new LambdaQueryWrapper<>();
-        lqw.lt(User::getAge,18);
-        userDao.selectList(lqw);
+        // LambdaQueryWrapper<User> lqw = new LambdaQueryWrapper<>();
+        // lqw.lt(User::getAge,18);
+        // userDao.selectList(lqw);
 
+        // /**
+        //  * 多条件查询: 并列关系
+        //  */
+        // LambdaQueryWrapper<User> lqw = new LambdaQueryWrapper<User>();
+        // lqw.lt(User::getAge,40).gt(User::getAge,10);
+        // System.out.println(userDao.selectList(lqw));
 
+        /**
+         * 多条件查询: 或者关系
+         */
+        LambdaQueryWrapper<User> lqw = new LambdaQueryWrapper<User>();
+        lqw.lt(User::getAge,40).or().gt(User::getAge,10);
+        System.out.println(userDao.selectList(lqw));;
 
     }
 
