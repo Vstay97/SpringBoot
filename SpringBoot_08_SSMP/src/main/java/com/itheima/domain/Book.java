@@ -1,4 +1,4 @@
-package com.itheima.springboot_08_ssmp.domain;
+package com.itheima.domain;
 
 import lombok.Data;
 
