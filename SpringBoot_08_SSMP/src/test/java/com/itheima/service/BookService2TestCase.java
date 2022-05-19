@@ -1,19 +1,15 @@
 package com.itheima.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.itheima.dao.BookDao;
 import com.itheima.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-
 @SpringBootTest
-public class BookServiceTestCase {
+public class BookService2TestCase {
     @Autowired
-    private BookService bookService;
+    private BookService2 bookService2;
 
     @Test
     public void testSave(){
@@ -21,12 +17,12 @@ public class BookServiceTestCase {
         book.setName("测试SerivceSave123");
         book.setType("测试ServiceSave");
         book.setDescription("测试数据123123");
-        System.out.println(bookService.save(book));
+        System.out.println(bookService2.save(book));
     }
 
     @Test
     public void testDeleteById(){
-        System.out.println(bookService.delete(51));
+        System.out.println(bookService2.delete(51));
     }
 
     @Test
@@ -36,22 +32,22 @@ public class BookServiceTestCase {
         book.setName("测试ServiceUpdate_abc");
         book.setType("测试ServiceUpdate");
         book.setDescription("测试数据");
-        System.out.println(bookService.update(book));
+        System.out.println(bookService2.update(book));
     }
 
     @Test
     public void testGetById(){
-        System.out.println(bookService.getById(12));
+        System.out.println(bookService2.getById(12));
     }
 
     @Test
     public void testGetAll(){
-        System.out.println(bookService.getAll() );
+        System.out.println(bookService2.getAll() );
     }
 
     @Test
     public void testGetPage(){
-        IPage<Book> bookIPage = bookService.getPage(2, 5);
+        IPage<Book> bookIPage = bookService2.getPage(2, 5);
         System.out.println("当前页: "+bookIPage.getCurrent());
         System.out.println("所有页: "+bookIPage.getPages());
         System.out.println("每页显示数: "+bookIPage.getSize());

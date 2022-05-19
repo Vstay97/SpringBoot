@@ -4,14 +4,14 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.dao.BookDao;
 import com.itheima.domain.Book;
-import com.itheima.service.BookService;
+import com.itheima.service.BookService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class BookServiceImpl implements BookService {
+public class BookService2Impl implements BookService2 {
 
     @Autowired
     BookDao bookDao;

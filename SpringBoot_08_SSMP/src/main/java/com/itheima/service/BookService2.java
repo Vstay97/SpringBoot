@@ -5,7 +5,7 @@ import com.itheima.domain.Book;
 
 import java.util.List;
 
-public interface BookService {
+public interface BookService2 {
 
     boolean save(Book book);
 
