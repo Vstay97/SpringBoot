@@ -7,6 +7,7 @@ import com.itheima.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -24,8 +25,13 @@ public class BookController {
      * 增加操作
      */
     @PostMapping
-    public R save(@RequestBody Book book) {
-        return new R(bookService.save(book));
+    public R save(@RequestBody Book book) throws IOException {
+        // 测试异常消息处理
+        if (true) {
+            throw new IOException();
+        }
+        Boolean flag = bookService.save(book);
+        return new R(flag, flag ? "添加成功 ^_^" : "添加失败 -_-!");
     }
 
     /**
@@ -49,7 +55,7 @@ public class BookController {
      */
     @GetMapping("/{id}")
     public R getBookById(@PathVariable Integer id) {
-        return new R(true,bookService.getById(id));
+        return new R(true, bookService.getById(id));
     }
 
     /**
@@ -57,6 +63,6 @@ public class BookController {
      */
     @GetMapping("/{current}/{size}")
     public R getPage(@PathVariable Integer current, @PathVariable Integer size) {
-        return new R(true,bookService.getPage(current, size));
+        return new R(true, bookService.getPage(current, size));
     }
 }
