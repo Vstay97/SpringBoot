@@ -26,10 +26,6 @@ public class BookController {
      */
     @PostMapping
     public R save(@RequestBody Book book) throws IOException {
-        // 测试异常消息处理
-        if (true) {
-            throw new IOException();
-        }
         Boolean flag = bookService.save(book);
         return new R(flag, flag ? "添加成功 ^_^" : "添加失败 -_-!");
     }
@@ -63,6 +59,7 @@ public class BookController {
      */
     @GetMapping("/{current}/{size}")
     public R getPage(@PathVariable Integer current, @PathVariable Integer size) {
-        return new R(true, bookService.getPage(current, size));
+        IPage<Book> page= bookService.getPage(current,size);
+        return new R(page != null, page);
     }
 }
