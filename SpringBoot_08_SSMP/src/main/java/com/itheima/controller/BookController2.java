@@ -55,8 +55,8 @@ public class BookController2 {
      * 分页查询
      */
     @GetMapping("/{current}/{size}")
-    public IPage<Book> getPage(@PathVariable Integer current, @PathVariable Integer size){
-        return bookService.getPage(current,size);
+    public IPage<Book> getPage(@PathVariable Integer current, @PathVariable Integer size,Book book){
+        return bookService.getPage(current,size,book);
     }
 
 

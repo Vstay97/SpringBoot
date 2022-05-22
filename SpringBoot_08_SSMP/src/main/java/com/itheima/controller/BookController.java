@@ -58,10 +58,10 @@ public class BookController {
      * 分页查询
      */
     @GetMapping("/{current}/{size}")
-    public R getPage(@PathVariable Integer current, @PathVariable Integer size) {
-        IPage<Book> page= bookService.getPage(current,size);
-        if (current > page.getPages()){
-            page = bookService.getPage((int)page.getPages(),size);
+    public R getPage(@PathVariable Integer current, @PathVariable Integer size, Book book) {
+        IPage<Book> page = bookService.getPage(current, size, book);
+        if (current > page.getPages()) {
+            page = bookService.getPage((int) page.getPages(), size, book);
         }
         return new R(page != null, page);
     }
